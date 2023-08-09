@@ -73,6 +73,7 @@ On Jupyter Notebook, click New -> Terminal. This opens a command-line interface.
 Copy and paste the following command lines to pull the code from Github.
 
 ```
+cd SageMaker
 git init
 git clone [github_link]
 
