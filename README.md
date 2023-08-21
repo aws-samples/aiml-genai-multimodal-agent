@@ -2,14 +2,14 @@
 
 This file walks you through how to set up the infrastructure and applications, and run the code to create a multi-modal agents. The blog post provides a detailed discussion of this solution. 
 
-## Achitecture Diagram
+## Architecture Diagram
 
 <img src="images/architecture-diagram.png" width="680"/>
 
 
 ## Prerequisites
 
-This solution uses four [Lambda functions](https://aws.amazon.com/lambda/), which are serverless, event-driven compute services that runs applications. The Python code for the applications are packaged as zip files, stored in *lambda_zip_files* in this repo. We need to add them to an S3 bucket in your account in order to set up the Lambda functions.
+This solution uses five [Lambda functions](https://aws.amazon.com/lambda/), which are serverless, event-driven compute services that runs applications. The Python code for the applications are packaged as zip files, stored in *lambda_zip_files* in this repo. We need to add them to an S3 bucket in your account in order to set up the Lambda functions.
 
 First, make an S3 bucket. Go to S3 page in AWS, click "Create bucket". Then enter a bucket name, which should be universally unique. Take a note of the name, because we will need it in another section. Leave the rest as default, and click "Create bucket" at the bottom of the page.
 
@@ -22,7 +22,7 @@ Once the bucket is created, click the bucket name, and create a folder called *c
 
 <img src="images/enter_folder_name.png" width="680"/>
 
-Upload the four zip files in folder *lambda_zip_files* to the S3 bucket. 
+Upload the five zip files in folder *lambda_zip_files* to the S3 bucket. 
 
 <img src="images/upload_files.png" width="680"/>
 
