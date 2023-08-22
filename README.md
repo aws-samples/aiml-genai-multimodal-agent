@@ -1,6 +1,6 @@
 # Generative AI and Multi-Modal Agents in AWS: The Key to Unlocking New Value in Financial Markets
 
-This is the code repo of the blog [Generative AI and Multi-Modal Agents in AWS: The Key to Unlocking New Value in Financial Markets](www.amazon.com).
+This is the code repo of the blog [Generative AI and Multi-Modal Agents in AWS: The Key to Unlocking New Value in Financial Markets](https://www.amazon.com).
 
 This file walks you through how to set up the infrastructure and applications, and run the code to create a multi-modal agents. The blog post provides a detailed discussion of this solution. 
 
