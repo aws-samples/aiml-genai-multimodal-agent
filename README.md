@@ -79,11 +79,13 @@ cd SageMaker
 git init
 git clone git@github.com:aws-samples/aiml-genai-multimodal-agent.git
 ```
-Then open /aiml-genai-multimodal-agent/multimodal-demo.ipynb Python Notebook. This Notebook has the code to run the solution, as well as explanations of each step. 
+Then open *aiml-genai-multimodal-agent/multimodal-demo.ipynb* Python Notebook. This Notebook has the code to run the solution, as well as explanations of each step. 
 
-#Congratulations! After completing the Jupyter Notebook, you've developed a Multi-Modal Agent! 
+# Congratulations! After completing the Jupyter Notebook, you've developed a Multi-Modal Agent! 
 
 If you are interested in further developing a User Interface (UI) on top of it, please continue the following steps.
+
+## Streamlit Application
 
 The Streamlit App for this prioject is located in *app_complete.py*.
 It uses dependencies located in the *utility* folder.
@@ -106,7 +108,7 @@ Then follow the steps below to start the Streamlit Application.
 * To enter the Streamlit app, open and run the Streamlit_app.ipynb notebook. This will generate the appropiate link to enter your Streamlit app from SageMaker studio. Click on the link to enter your Streamlit app. Happy querying :)
 * **⚠ Note:**  If you rerun the Streamlit server it may use a different port. Take not of the port used (port number is the last 4 digit number after the last :) and modify the `port` variable in the `Streamlit_app.ipynb` notebook to get the correct link.
 
-##You've made it very far! If you would keep going and run it on AWS EC2, please follow the following steps.
+## You've made it very far! If you would keep going and run it on AWS EC2, please follow the following steps.
 
 To run this Streamlit App on AWS EC2 (I tested this on the Ubuntu Image)
 * [Create a new ec2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
