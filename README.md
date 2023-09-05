@@ -11,6 +11,8 @@ This file walks you through how to set up the infrastructure and applications, a
 
 ## Prerequisites
 
+**In order to run this solution, the user must have an API key to a Large Language Model (LLM) such as [Anthropic Claud2](https://www.anthropic.com/index/claude-2), or have access to [Amazon Bedrock](https://aws.amazon.com/bedrock/)'s foundation models.**
+
 This solution uses five [Lambda functions](https://aws.amazon.com/lambda/), which are serverless, event-driven compute services that runs applications. The Python code for the applications are packaged as zip files, stored in *lambda_zip_files* in this repo. We need to add them to an S3 bucket in your account in order to set up the Lambda functions.
 
 First, make an S3 bucket. Go to S3 page in AWS, click "Create bucket". Then enter a bucket name, which should be universally unique. Take a note of the name, because we will need it in another section. Leave the rest as default, and click "Create bucket" at the bottom of the page.
