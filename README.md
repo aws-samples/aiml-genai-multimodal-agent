@@ -83,9 +83,11 @@ git clone git@github.com:aws-samples/aiml-genai-multimodal-agent.git
 ```
 Then open *aiml-genai-multimodal-agent/multimodal-demo.ipynb* Python Notebook. This Notebook has the code to run the solution, as well as explanations of each step. 
 
+*The prompts in this solution are based on Anthropic Claude2. If you choose to use a different foundation model, please try tweaking the template. It's just like you would convey the same idea in slightly different ways to different people.*
+
+
 # Congratulations! After completing the Jupyter Notebook, you've developed a Multi-Modal Agent! 
 
-The prompts in this solution are based on Anthropic Claude2. If you choose to use a different foundation model, please try tweaking the template. It's just like you would convey the same idea in slightly different ways to different people.
 
 
 ## Security
