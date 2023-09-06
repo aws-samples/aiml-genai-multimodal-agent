@@ -1,0 +1,6 @@
+anthropic==0.2.10
+boto3==1.26.163
+langchain==0.0.246
+PyAthena[SQLAlchemy]==2.25.2
+sqlalchemy==1.4.47
+PyPortfolioOpt
