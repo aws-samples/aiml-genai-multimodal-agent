@@ -642,9 +642,6 @@ Outputs:
   AudioSourceBucket:
     Value:
       Fn::Sub: "s3://${AudioTranscriptsSourceBucketResource}/"
-  AudioSourceBucket:
-    Value:
-      Fn::Sub: "s3://${AudioTranscriptsSourceBucketResource}/"
   FSITextractLambdaFunction:
     Value:
       !GetAtt FSITextract.Arn
