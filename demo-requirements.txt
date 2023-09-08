@@ -4,6 +4,6 @@ langchain==0.0.246
 PyAthena[SQLAlchemy]==2.25.2
 sqlalchemy==1.4.47
 pandas<2.0.0
-numpy==1.21.1
+numpy==1.22.0
 nest-asyncio==1.5.5
 PyPortfolioOpt
