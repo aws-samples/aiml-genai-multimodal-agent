@@ -91,7 +91,7 @@ Then open *aiml-genai-multimodal-agent/multimodal-demo.ipynb* Python Notebook. T
 
 # Congratulations! After completing the Jupyter Notebook, you've developed a Multi-Modal Agent! 
 
-# Pricing guidance
+## Pricing guidance
 
 AWS Pricing Calculator guidance - Multi-modal Agents
 [https://calculator.aws/#/estimate]
