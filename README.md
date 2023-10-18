@@ -81,8 +81,7 @@ Copy and paste the following command lines to pull the code from Github.
 
 ```
 cd SageMaker
-git init
-git clone git@github.com:aws-samples/aiml-genai-multimodal-agent.git
+git clone https://github.com/aws-samples/aiml-genai-multimodal-agent.git
 ```
 Then open *aiml-genai-multimodal-agent/multimodal-demo.ipynb* Python Notebook. This Notebook has the code to run the solution, as well as explanations of each step. 
 
