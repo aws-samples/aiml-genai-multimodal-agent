@@ -1,0 +1,10 @@
+anthropic==0.2.10
+boto3
+langchain==0.0.309
+langchain_experimental
+PyAthena[SQLAlchemy]==2.25.2
+sqlalchemy==1.4.47
+pandas<2.0.0
+numpy==1.22
+nest-asyncio==1.5.5
+PyPortfolioOpt
