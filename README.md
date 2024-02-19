@@ -90,7 +90,8 @@ The streamlit app for this prioject is located in *app_complete.py*.
 It uses dependencies located in the utility folder. 
 
 To run this Streamlit App on Sagemaker Studio follow the steps in the link below:
-* [Set Up SageMaker Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-iam.html)
+* Follow the steps outlined above for the **Prerequisite** and **Create infrastructure using CloudFormation** section to deploy/create the relevant services.
+* [Set Up SageMaker Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-iam.html).
     - Use the sagemaker execution role `SageMakerRole` deployed by the cloudformation template above for your SageMaker Studio Domain default execution role.
 * [Launch SageMaker Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-launch.html)
 * [Clone this git repo into studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-tasks-git.html)
@@ -103,6 +104,7 @@ To run this Streamlit App on Sagemaker Studio follow the steps in the link below
 * **⚠ Note:**  If you rerun the Streamlit server it may use a different port. Take not of the port used (port number is the last 4 digit number after the last :) and modify the `port` variable in the `StreamlitLink.ipynb` notebook to get the correct link.
 
 To run this Streamlit App on AWS EC2 (I tested this on the Ubuntu Image)
+* Follow the steps outlined above for the **Prerequisite**and **Create infrastructure using CloudFormation** section to deploy/create the relevant services.
 * [Create a new ec2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
     - Use the sagemaker execution role `SageMakerRole` deployed by the cloudformation template above for your [ec2 instance profile IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html).
 * Expose TCP port range 8500-9000 on Inbound connections of the attached Security group to the ec2 instance. TCP port 8501 is needed for Streamlit to work. See image below
