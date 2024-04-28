@@ -228,21 +228,33 @@ tools = [
 ]
 
 combo_template = """\n\nHuman:
-You are a Minimization Solutionist with a set of tools at your disposal.
-
-You would be presented with a problem. First understand the problem and devise a plan to solve the problem. 
-Please output the plan starting with the header 'Plan:' and then followed by a numbered list of steps.        
-Ensure the plan has the minimum amount of steps needed to solve the problem. Do not include unnecessary steps.
-
-<instructions>
+Let's first understand the problem and devise a plan to solve the problem. 
+Please output the plan starting with the header 'Plan:' and then followed by a numbered list of steps. Do not use past conversation history when you are planning the steps.
+Please make the plan the minimum number of steps required to accurately complete the task.    
+    
 These are guidance on when to use a tool to solve a task, follow them strictly:
-1. For the tool that specifically focuses on stock price data, use "Stock Query Tool".    
-2. For financial information lookup that covers various financial data like company's finance, performance or any other information pertaining a company beyond stocks, use the "Financial Data Explorer Tool". Ask specific questions using this tool as it is your knowledge database. Refrain from asking question like "look up 10K filings" instead a more specific question like "what is the revenue for this company". 
-3. When you need to find key phrases in a report, use the "Detect Phrases Tool" to get the information about all key phrases and respond with key phrases relavent to the question. 
-4. When you need to provide an optimized stock portfolio based on stock names, use Portfolio Optimization Tool. The output is the percent of fund you should spend on each stock. This tool only takes stock ticker as input and not stock prices, for example ["EWR","JHT"].
-5. Please use the PythonREPLTool exclusively for calculations, refrain from utilizing 'print' statements for output. Use this too only when needed, most times its unnecessary.
-6. When you need to analyze sentiment of a topic, use "Sentiment Analysis Tool".
-</instructions>\n\nAssistant:"""
+- When you need to find stock information, use Stock Querying Tool , as it provides more accurate and relevant answers. Pay attention to the time period. DO NOT search for answers on the internet.
+    
+- When you need to look up financial and business information (such as revenue, income, risk, highlights etc.) from a financial quartely/annual report, use the Financial Information Lookup Tool.
+    
+- When you need to find the key phrases information, from information pertaining to the question retrieved from financial report using the Financial Information Lookup Tool,  then use Detect Phrases Tool to get the information about all key phrases and respond with key phrases relavent to the question.
+
+- When you need to provide an optimized stock portfolio based on stock names, use Portfolio Optimization Tool. The output is the percent of fund you should spend on each stock.
+    
+- When you need to do maths calculations, use "PythonREPLTool()" which is based on the python programming language. Only provide the required numerical values to this tool and test, for e.g. "stock_prices": [25, 50, 75] only pass in [25, 50, 75] not the text "stock prices:"
+    
+- When you need to analyze sentiment of a topic, from information pertaining to the question retrieved from financial report using the Financial Information Lookup Tool, use "Sentiment Analysis Tool" on the information from the "Financial Information Lookup Tool"
+
+"Closing price" means the most recent stock price of the time period. 
+Income can be a positive (profit) or negative value (loss). If the value is in parenthesis (), take it as negative value, which means it's a loss. E.g. for (1000), use -1000.         
+When you have a question about calculating a ratio, figure out the formula for the calculation, and find the relevant financial information using the proper tool. Then use PythonREPLTool() tool for calculation.
+If you can't find the answer, say "I can't find the answer for this question."   
+
+Once you have answers for the question, stop and provide the final answers. The final answers should be a combination of the answers to all the questions, not just the last one.
+Do not include the tools used when providing your final answer. Provide a coherent final answer
+    
+Please use these to construct an answer to the question , as though you were answering the question directly. Ensure that your answer is accurate and doesn’t contain any information not directly supported by the summary and quotes.
+If there are no data or information in this document that seem relevant to this question, please just say "I can’t find any relevant quotes".\n\nAssistant:"""
 
 combo_template=combo_template if st.session_state['prompt']=="" else st.session_state['prompt']
 chat_history_table = 'DYNAMODB table name' ### SPECIFY THE DYNAMODB TABLE
