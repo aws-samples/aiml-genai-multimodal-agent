@@ -9,7 +9,7 @@ This file walks you through how to set up the infrastructure and applications, a
 
 ## Prerequisites
 
-This solution uses four [Lambda functions](https://aws.amazon.com/lambda/), which are serverless, event-driven compute services that runs applications. The Python code for the applications are packaged as zip files, stored in *lambda_zip_files* in this repo. We need to add them to an S3 bucket in your account in order to set up the Lambda functions.
+This solution uses five [Lambda functions](https://aws.amazon.com/lambda/), which are serverless, event-driven compute services that runs applications. The Python code for the applications are packaged as zip files, stored in *lambda_zip_files* in this repo. You need to add them to an S3 bucket in your account in order to set up the Lambda functions.
 
 First, make an S3 bucket. Go to S3 page in AWS, click "Create bucket". Then enter a bucket name, which should be universally unique. Take a note of the name, because we will need it in another section. Leave the rest as default, and click "Create bucket" at the bottom of the page.
 
@@ -45,7 +45,7 @@ Then upload it in CloudFormation to create a stack. This stack sets up the neces
 
 <img src="images/create_stack.png" width="680"/>
 
-Upload *Consolidated-cfn.yaml*, and click "Next". 
+Upload *cloudformation.yaml*, and click "Next". 
 
 <img src="images/upload_stack.png" width="680"/>
 
@@ -86,6 +86,8 @@ git clone [github_link]
 ```
 ## Set Up StreamLit Front-End
 
+⚠️ **NOTE**: Before using the Streamlit app, completely run the `multimodal-demo.ipynb` notebook to completely setup the stock database and all other tools used by this agent.  
+
 The streamlit app for this prioject is located in *app_complete.py*.
 It uses dependencies located in the utility folder. 
 
@@ -95,7 +97,7 @@ To run this Streamlit App on Sagemaker Studio follow the steps in the link below
     - Use the sagemaker execution role `SageMakerRole` deployed by the cloudformation template above for your SageMaker Studio Domain default execution role.
 * [Launch SageMaker Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-launch.html)
 * [Clone this git repo into studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-tasks-git.html)
-* Change the values for the variables `REGION` and `STACK_NAME` to the region you are working in and name of the deployed cloudformation stack respectively in `app_complete.py`
+* ⚠️ Change the values for the variables **REGION** and **STACK_NAME** to the region you are working in and name of the deployed cloudformation stack respectively in `app_complete.py`
 * Open a system terminal by clicking on **Amazon SageMaker Studio** and then **System Terminal** as shown in the diagram below
 * <img src="images/studio-new-launcher.png" width="600"/>
 * Navigate into the cloned repository directory using the `cd` command and run the command `pip install -r requirements.txt` to install the needed python libraries
