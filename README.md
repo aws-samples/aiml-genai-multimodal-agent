@@ -86,7 +86,7 @@ git clone [github_link]
 ```
 ## Set Up StreamLit Front-End
 
-⚠️ **NOTE**: Before using the Streamlit app, completely run the `multimodal-demo.ipynb` notebook to completely setup the stock database and all other tools used by this agent.  
+⚠️ **NOTE**: Before using the Streamlit app, completely run the `multimodal-demo.ipynb` notebook to setup the stock database and all other tools used by this agent.  
 
 The streamlit app for this prioject is located in *app_complete.py*.
 It uses dependencies located in the utility folder. 
